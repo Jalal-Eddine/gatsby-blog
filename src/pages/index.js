@@ -18,8 +18,9 @@ export default ({data}) => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <h1>Testing</h1>
-      <h2>{data.allMarkdownRemark.totalCount}</h2>
+      <h1>Note about the project</h1>
+      <p>Hi! JalalEddine here, this is a blog where I test Gatsby with the markdown plugin "allMarkdownRemark", using Graphql and CSS in JS. I was considering using it for my "Firdaws" project but after comparing the pros and cons I preferred using Frontity instead.</p>
+      <h2>Number of posts: {data.allMarkdownRemark.totalCount}</h2>
       {data.allMarkdownRemark.edges.map(({node}) =>(
         <div key={node.id}>
           <BlogLink to={node.fields.slug}>
